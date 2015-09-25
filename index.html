@@ -1,7 +1,53 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <title>Ben's Past</title>
+  </head>
+  <body>
+    <ul id="fixedHeader">
+      <li class="navbar" id="btnMyPast">My Past</li>
+      <li class="navbar" id="btnMyFuture"><a href="future.html">My Future</a></li>
+    </ul>
+    <div id="mainDiv">
+      <h1>My Past</h1>
+      <p>My name is Ben. Over the years I've had a lot of hobbies.</p>
+      <h3>Hiking</h3>
+      <img class="smallPic" src="pics/hiking.jpg" alt="hiking" />
+      <h3>Rocking Climbing</h3>
+      <img class="smallPic" src="pics/climbing.jpg" alt="climbing" />
+      <h3>Music</h3>
+      <table>
+        <tr>
+          <td>
+            <img class="smallPic" src="pics/music.jpg" alt="music" />
+          </td>
+          <td>
+            <ul id="albumDetails" class="invisible">
+              <li class="dotless"><img id="albumArt" src="#" alt="album art" /></li>
+              <li class="dotless" id="albumTitle">Album Title</li>
+              <li class="dotless"><a id="linkItunes" href="#" target="_blank"><img id="btnItunes" src="music/itunes.png" alt="itunes link" /></a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <ul id="songList" class="invisible">
+              <li class="dotless song selected">The Next Step</li>
+              <li class="dotless song">Sworn to Secrecy</li>
+            </ul>
+            <audio controls id="audioControls">
+              <source src="music/TheNextStep.mp3" type="audio/mpeg" />
+            </audio>
+          </td>
+          <td></td>
+        </tr>
+      </table>
+      <p>But there is one hobby that has held my interest longer than any other... <a href="future.html">(my future)</a></p>
+      <br>
+    </div>
+  </body>
 </html>

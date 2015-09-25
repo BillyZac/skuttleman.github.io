@@ -1,0 +1,85 @@
+body {
+  background-color: black;
+  color: lightgray;
+  font-family: arial;
+}
+
+#fixedHeader {
+  text-align: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  margin: 0px 0px 0px 0px;
+  padding: 10px 10px 10px 10px;
+  width: 100%;
+  background-color: darkblue;
+  z-index: 10;
+}
+
+.navbar {
+  display: inline-block;
+  margin: 0px 10px 0px 10px;
+  font-size: 25px;
+  color: white;
+}
+
+.navbar a {
+  color: gray;
+}
+
+.navbar a:hover {
+  font-style: italic;
+}
+
+#mainDiv {
+  position: relative;
+  top: 40px;
+}
+
+.smallPic {
+  width: 350px;
+}
+
+#btnItunes {
+  height: 32px;
+  margin-top: 10px;
+}
+#albumArt {
+  height: 140px;
+}
+#albumTitle {
+  color: yellow;
+  font-style: italic;
+}
+
+.invisible {
+  display: none;
+}
+
+.dotless {
+  list-style-type: none;
+}
+
+.song:hover {
+  cursor: pointer;
+}
+
+.selected {
+  background-color: blue;
+}
+
+code {
+  position: relative;
+  left: 50px;
+  color: green;
+  font-size: 20px;
+}
+
+#feelings {
+  width: 100%;
+  text-align: center;
+}
+
+.feelingPic {
+  height: 200px;
+}
