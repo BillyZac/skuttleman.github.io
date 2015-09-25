@@ -7,6 +7,9 @@ function main()
   songs['Sworn to Secrecy'] = { songTitle: "Sworn to Secrecy", albumTitle: "Slave to Time",
                            src: "music/SwornToSecrecy.mp3", albumArt: "music/slave-to-time.jpg",
                            link: "https://itunes.apple.com/us/album/slave-to-time/id276812547" };
+  songs['Let\'s Put the Past Back Together'] = { songTitle: "Let's Put the Past Back Together", albumTitle: "Story of My Life",
+                           src: "music/LetsPutThePastBackTogether.mp3", albumArt: "music/story-of-my-life.jpg",
+                           link: "https://itunes.apple.com/us/album/story-of-my-life/id444023700" };
   songs['Morning After Pill'] = { songTitle: "Morning After Pill", albumTitle: "Slave to Time",
                            src: "music/MorningAfterPill.mp3", albumArt: "music/slave-to-time.jpg",
                            link: "https://itunes.apple.com/us/album/slave-to-time/id276812547" };
