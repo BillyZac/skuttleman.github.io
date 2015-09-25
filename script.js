@@ -27,21 +27,33 @@ function main()
 
 
   // Audio Controls
-  $('audio')[0].onplaying = function() {
-    $('#songList').removeClass('invisible');
-    $('#albumDetails').removeClass('invisible');
-    updateAlbumDetails($('.song.selected').text());
-  };
-  $('.song').click(function() {
-    if (!$(this).hasClass('selected'))
-    {
-      audioControl = $('audio')[0];
-      $('.song').removeClass('selected');
-      $(this).addClass('selected');
-      audioControl.src = songs[$('.song.selected').text()]['src'];
+  if ($('audio')[0] != null)
+  {
+    $('audio')[0].onplaying = function() {
+      $('#songList').removeClass('invisible');
+      $('#albumDetails').removeClass('invisible');
       updateAlbumDetails($('.song.selected').text());
-      audioControl.play();
-    }
+    };
+    $('.song').click(function() {
+      if (!$(this).hasClass('selected'))
+      {
+        audioControl = $('audio')[0];
+        $('.song').removeClass('selected');
+        $(this).addClass('selected');
+        audioControl.src = songs[$('.song.selected').text()]['src'];
+        updateAlbumDetails($('.song.selected').text());
+        audioControl.play();
+      }
+    });
+  }
+
+
+  // Gif Hover
+  $('.feelingPic').hover(function() {
+      $('.hiddenText').addClass('invisible');
+      $('#' + $(this).attr('id') + 'Hover').removeClass('invisible');
+    }, function() {
+      $('.hiddenText').addClass('invisible');
   });
 }
 

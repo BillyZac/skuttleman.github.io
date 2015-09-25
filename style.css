@@ -36,6 +36,28 @@ body {
   top: 40px;
 }
 
+.picText {
+  background-repeat: no-repeat;
+  background-size: 400px;
+  width: 400px;
+  text-align: center;
+  padding: 100px 0px 100px 0px;
+  font-size: 150%;
+  color: lightcyan;
+}
+
+#hiking {
+  background-image: url('pics/hiking.jpg');
+}
+
+#climbing {
+  background-image: url('pics/climbing.jpg');
+}
+
+#music {
+  background-image: url('pics/music.jpg');
+}
+
 .smallPic {
   width: 350px;
 }
