@@ -1,5 +1,6 @@
 function main()
 {
+  // Audio Library
   var songs = {};
   songs['The Next Step'] = { songTitle: "The Next Step", albumTitle: "Story of My Life",
                            src: "music/TheNextStep.mp3", albumArt: "music/story-of-my-life.jpg",
@@ -46,6 +47,14 @@ function main()
       }
     });
   }
+
+
+  // Image Hover
+  $('.picText').hover(function() {
+      $(this).css('color', 'red');
+    }, function() {
+      $(this).css('color', 'lightcyan');
+  });
 
 
   // Gif Hover

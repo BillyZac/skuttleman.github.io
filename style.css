@@ -9,7 +9,7 @@ body {
   position: fixed;
   top: 0px;
   left: 0px;
-  margin: 0px 0px 0px 0px;
+  margin: 0px;
   padding: 10px 10px 10px 10px;
   width: 100%;
   background-color: darkblue;
@@ -42,8 +42,10 @@ body {
   width: 400px;
   text-align: center;
   padding: 100px 0px 100px 0px;
+  margin: 10px;
   font-size: 150%;
   color: lightcyan;
+  border-radius: 20px;
 }
 
 #hiking {
