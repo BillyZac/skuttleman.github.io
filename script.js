@@ -14,15 +14,6 @@ function main()
   songs['Morning After Pill'] = { songTitle: "Morning After Pill", albumTitle: "Slave to Time",
                            src: "music/MorningAfterPill.mp3", albumArt: "music/slave-to-time.jpg",
                            link: "https://itunes.apple.com/us/album/slave-to-time/id276812547" };
-  
-  var firstsong = true;
-  for (var song in songs) {
-    $('#songList').append('<li class="dotless song' + (firstsong ? ' selected' : '') + '">' + songs[song].songTitle + '</li>');
-    if (firstsong) $('#audioControls').append('<source src="' + songs[song].src + '" type="audio/mpeg" />');
-    firstsong = false;
-  }
-  
-
   var currentSong = -1;
   function imgFile(file, newnum)
   {
