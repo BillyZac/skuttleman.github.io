@@ -58,7 +58,7 @@ function main()
   }
 
 
-  // Image Hover
+  // Image MouseEnter
   $('.picText').mouseenter(function() {
       $('#blurb' + $(this).attr('id')).fadeIn('slow');
       $('#blurb' + $(this).attr('id')).removeClass('invisible');
