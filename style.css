@@ -4,6 +4,10 @@ body {
   font-family: arial;
 }
 
+p {
+  font-size: 140%;
+}
+
 #fixedHeader {
   text-align: center;
   position: fixed;
@@ -19,7 +23,7 @@ body {
 .navbar {
   display: inline-block;
   margin: 0px 10px 0px 10px;
-  font-size: 25px;
+  font-size: 40px;
   color: white;
 }
 
@@ -33,7 +37,7 @@ body {
 
 #mainDiv {
   position: relative;
-  top: 40px;
+  top: 50px;
 }
 
 .picText {
@@ -43,9 +47,17 @@ body {
   text-align: center;
   padding: 100px 0px 100px 0px;
   margin: 10px;
-  font-size: 150%;
+  font-size: 250%;
   color: lightcyan;
   border-radius: 20px;
+}
+
+.picText:hover {
+  cursor: pointer;
+}
+
+.blurbHeading {
+  color: yellow;
 }
 
 #hiking {
@@ -102,6 +114,7 @@ code {
 #feelings {
   width: 100%;
   text-align: center;
+  color: yellow;
 }
 
 .feelingPic {
