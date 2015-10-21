@@ -1,3 +1,11 @@
+function resizit() {
+  $('#backgroundPic').css({ top: ((window.innerHeight - $('#backgroundPic').height()) / 2),
+    left: ((window.innerWidth - $('#backgroundPic').width()) / 2) });
+  $('#popup').css({ width: window.innerWidth - 40, height: window.innerHeight - 40 });
+  $('#popupClose').css({ left: window.innerWidth - 40 - $('#popupClose').width() })
+}
+
+
 function main()
 {
   // Audio Library
@@ -14,6 +22,13 @@ function main()
   songs['Morning After Pill'] = { songTitle: "Morning After Pill", albumTitle: "Slave to Time",
                            src: "music/MorningAfterPill.mp3", albumArt: "music/slave-to-time.jpg",
                            link: "https://itunes.apple.com/us/album/slave-to-time/id276812547" };
+  var firstsong = true;
+  for (var song in songs) {
+    $('#songList').append('<li class="dotless song' + (firstsong ? ' selected' : '') + '">' + songs[song].songTitle + '</li>');
+    if (firstsong) $('#audioControls').append('<source src="' + songs[song].src + '" type="audio/mpeg" />');
+    firstsong = false;
+  }
+
   var currentSong = -1;
   function imgFile(file, newnum)
   {
@@ -48,11 +63,20 @@ function main()
     });
   }
 
-
+  
   // Image MouseEnter
-  $('.picText').mouseenter(function() {
-      $('#blurb' + $(this).attr('id')).fadeIn('slow');
-      $('#blurb' + $(this).attr('id')).removeClass('invisible');
+  function timeout(e, a, off) {
+    $(e).css('color', 'rgba(224,255,255,' + a + ')');
+    if ((off < 0.0 && a > 0.0) || (off > 0.0 && a < 1.0)) window.setTimeout(timeout, 75, e, a + off, off);
+  }
+  $('.blurbtastic').hover(function() {
+    if ($('#blurb' + $(this).attr('id')).position()["left"] <= -73) {
+      $('#blurb' + $(this).attr('id')).animate({ left: '0px', opacity: 1.0 }, 750);
+      window.setTimeout(timeout, -450, this, 1.0, -0.15);
+    }
+  }, function() {
+    $('#blurb' + $(this).attr('id')).animate( { left: '-500px', opacity: 0.0 }, 750);
+    window.setTimeout(timeout, 50, this, 0.0, 0.15);
   });
 
 
@@ -63,6 +87,31 @@ function main()
     }, function() {
       $('.hiddenText').addClass('invisible');
   });
+
+
+  // popup Functionality
+  var poptext = ["Click on this annoying pop-up ad!", "Stuff you don't want or need. BUY NOW!", "Visiting this page for a specific reason? Buy something unrelated!"];
+  var popcount = 0;
+  function showpopup() {
+    if (popcount < poptext.length) {
+      $('#popupText').text(poptext[popcount]);
+      $('#popup').removeClass('invisible');
+      resizit();
+      popcount ++;
+    }
+  }
+  //window.setTimeout(showpopup, 5000);
+  $('#popupClose').hover(function() { $(this).attr('src', 'pics/close2.png'); },
+    function() { $(this).attr('src',  'pics/close1.png'); });
+  $('#popupClose').click(function() {
+    $('#popup').addClass('invisible');
+    window.setTimeout(showpopup, 2000);
+  });
+
+
+
+  resizit();
 }
 
 $(document).ready(main);
+$(window).resize(resizit);
