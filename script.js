@@ -1,7 +1,9 @@
 function resizit() {
+  $('#backgroundPic').css('width', window.innerWidth);
   $('#backgroundPic').css({ top: ((window.innerHeight - $('#backgroundPic').height()) / 2),
     left: ((window.innerWidth - $('#backgroundPic').width()) / 2) });
-  $('#popup').css({ width: window.innerWidth - 40, height: window.innerHeight - 40 });
+  $('#popup').css({ width: window.innerWidth - 40,
+    height: Math.max($('#popupText').height() + 80, window.innerHeight - 40) });
   $('#popupClose').css({ left: window.innerWidth - 40 - $('#popupClose').width() })
 }
 
@@ -72,7 +74,7 @@ function main()
   $('.blurbtastic').hover(function() {
     if ($('#blurb' + $(this).attr('id')).position()["left"] <= -73) {
       $('#blurb' + $(this).attr('id')).animate({ left: '0px', opacity: 1.0 }, 750);
-      window.setTimeout(timeout, -450, this, 1.0, -0.15);
+      window.setTimeout(timeout, 50, this, 1.0, -0.15);
     }
   }, function() {
     $('#blurb' + $(this).attr('id')).animate( { left: '-500px', opacity: 0.0 }, 750);
@@ -90,17 +92,17 @@ function main()
 
 
   // popup Functionality
-  var poptext = ["Click on this annoying pop-up ad!", "Stuff you don't want or need. BUY NOW!", "Visiting this page for a specific reason? Buy something unrelated!"];
+  var poptext = ["No website is complete without a Pop-Up Ad!", "Click here to install software to block this ad!", "Don't ignore me. Ads have feelings, too."];
   var popcount = 0;
   function showpopup() {
-    if (popcount < poptext.length) {
+    if (popcount < poptext.length && poptext[popcount].length > 0) {
       $('#popupText').text(poptext[popcount]);
       $('#popup').removeClass('invisible');
       resizit();
       popcount ++;
     }
   }
-  //window.setTimeout(showpopup, 5000);
+  window.setTimeout(showpopup, 7000);
   $('#popupClose').hover(function() { $(this).attr('src', 'pics/close2.png'); },
     function() { $(this).attr('src',  'pics/close1.png'); });
   $('#popupClose').click(function() {
