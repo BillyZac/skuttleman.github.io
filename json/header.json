@@ -1,18 +1,23 @@
 {
   "data": [{
     "link": "#/home",
-    "text": "home"
+    "text": "home",
+    "iClass": "fa fa-home"
   },{
     "link": "#/bio",
-    "text": "bio"
+    "text": "bio",
+    "iClass": "fa fa-info-circle"
   },{
     "link": "#/portfolio",
-    "text": "portfolio"
+    "text": "portfolio",
+    "iClass": "fa fa-folder-open"
   },{
     "link": "#/music",
-    "text": "music"
+    "text": "music",
+    "iClass": "fa fa-music"
   },{
     "link": "#/links",
-    "text": "links"
+    "text": "links",
+    "iClass": "fa fa-link"
   }]
 }
