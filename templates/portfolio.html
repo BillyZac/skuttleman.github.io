@@ -2,5 +2,18 @@
   <h1>Portfolio</h1>
 </div>
 <div class="below-the-fold">
-  <p>More Stuff</p>
+  <h2>My Projects</h2>
+  <ul class="projects">
+    <li class="project" ng-repeat="project in projects">
+      <h3><a ng-href="{{project.link}}">{{project.title}}</a></h3>
+      <h4>{{project.tagLine}}</h4>
+      <p>{{project.description}}</p>
+      <span>Technologies:</span>
+      <ul class="technologies">
+        <li class="technology" ng-repeat="technology in project.technologies">
+          {{technology}}
+        </li>
+      </ul>
+    </li>
+  </ul>
 </div>

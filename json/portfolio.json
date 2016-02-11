@@ -1,0 +1,46 @@
+{
+  "data": [{
+    "title": "Chatzo",
+    "link": "http://chatzo.herokuapp.com/",
+    "tagLine": "A Simple Chat App",
+    "description": "This was a side project I made while learning about socket.io. As an homage to a friend of my mine who says wacky random things, there is a chat-bot that will respond to messages from time to time: shib-bot.",
+    "technologies": [
+      "socket.io",
+      "node/express",
+      "postgreSQL",
+      "angular",
+      "foundation"
+    ]
+  },{
+    "title": "Planit",
+    "link": "http://www.planit.space/",
+    "tagLine": "Universal Event Planning",
+    "description": "This was a group project made during my full stack web development program at Galvanize. Users can come together to work on organizing a taking part in events.",
+    "technologies": [
+      "postgreSQL",
+      "node/express",
+      "handlebars",
+      "jQuery",
+      "bootstrap"
+    ]
+  },{
+    "title": "Pizza Time",
+    "link": "https://pizzatime.firebaseapp.com/",
+    "tagLine": "The World's Most Accurate Clock",
+    "description": "In a time that I was learning a ton about server-side programming, I wanted to see if I could still do something fully front-end. Is it weird that I'm more proud of this than anything else in my portfolio?",
+    "technologies": [
+      "scss",
+      "jQuery"
+    ]
+  },{
+    "title": "WordSearch",
+    "link": "https://wordsearch.firebaseapp.com/",
+    "tagLine": "A Wordsearch Puzzle When You Need One",
+    "description": "My first deployed web app is a wordsearch puzzle generator based on a few user inputs. The words used to make the puzzle are referenced with an API that pulls a definition for each one.",
+    "technologies": [
+      "scss",
+      "jQuery",
+      "handlebars"
+    ]
+  }]
+}

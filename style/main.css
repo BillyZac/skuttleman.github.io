@@ -61,35 +61,6 @@ img.back-image {
   flex-direction: column;
   justify-content: center;
 }
-.app {
-  overflow-y: scroll;
-  height: 100%;
-}
-
-.app .above-the-fold {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 10px;
-  animation: fadein 2.25s;
-  height: calc(100% - 100px);
-}
-
-.app .above-the-fold * {
-  color: #ddd;
-}
-
-.app .below-the-fold {
-  background-color: white;
-  padding: 10px;
-  overflow: hidden;
-}
-
-.app .below-the-fold * {
-  color: black;
-}
-
 .app.home {
   overflow-y: hidden;
 }
@@ -106,4 +77,64 @@ img.back-image {
   to {
     opacity: 1;
   }
+}
+.app {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.app .above-the-fold {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  animation: fadein 2.25s;
+  height: calc(100% - 125px);
+}
+
+.app .above-the-fold * {
+  color: #ddd;
+}
+
+.app .below-the-fold {
+  background-color: white;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.app .below-the-fold * {
+  color: black;
+}
+.app.portfolio .below-the-fold li:not(:first-child) h3 {
+  margin-top: 20px;
+}
+
+.app.portfolio .below-the-fold h3 {
+  text-decoration: underline;
+  color: #66b;
+}
+
+.app.portfolio .below-the-fold li.project {
+  list-style: none;
+}
+
+.app.portfolio .below-the-fold li.project p {
+  margin: 0;
+}
+
+.app.portfolio .below-the-fold li.project ul.technologies {
+  margin-left: 0;
+  display: inline;
+}
+
+.app.portfolio .below-the-fold li.project li.technology {
+  list-style: none;
+  font-style: italic;
+  display: inline;
+  color: #933;
+}
+
+.app.portfolio .below-the-fold li.project li.technology:not(:last-child)::after {
+  content: ', ';
 }
