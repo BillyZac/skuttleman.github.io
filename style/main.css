@@ -22,6 +22,10 @@ img.back-image {
   -webkit-filter: grayscale(100%) opacity(0.8) brightness(30%) contrast(110%);
   filter: grayscale(100%) opacity(0.8) brightness(30%) contrast(110%);
 }
+
+h2 {
+  font-style: italic;
+}
 .nav ul {
   height: 100%;
   display: flex;
@@ -99,12 +103,16 @@ img.back-image {
 
 .app .below-the-fold {
   background-color: white;
-  padding: 10px;
+  padding: 10px 20%;
   overflow: hidden;
 }
 
 .app .below-the-fold * {
   color: black;
+}
+
+.app .below-the-fold p {
+  text-align: justify;
 }
 .app.portfolio .below-the-fold li:not(:first-child) h3 {
   margin-top: 20px;
@@ -112,7 +120,10 @@ img.back-image {
 
 .app.portfolio .below-the-fold h3 {
   text-decoration: underline;
-  color: #66b;
+}
+
+.app.portfolio .below-the-fold h3 a {
+  color: #008cba;
 }
 
 .app.portfolio .below-the-fold li.project {

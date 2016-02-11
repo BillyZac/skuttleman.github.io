@@ -5,9 +5,9 @@ app.controller('HomeController', [
   }
 ]);
 
-app.controller('AboutController', [
+app.controller('BioController', [
   '$scope', '$rootScope', 'loadJSON', function($scope, $rootScope, loadJSON) {
-    $rootScope.view = 'about';
+    $rootScope.view = 'bio';
     $rootScope.backgroundImage = '/images/hiking.jpg';
 
   }

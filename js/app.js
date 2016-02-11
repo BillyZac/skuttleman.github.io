@@ -3,9 +3,9 @@ app.config(['$routeProvider', function(route) {
   route.when('/', {
     templateUrl: '/templates/home.html',
     controller: 'HomeController'
-  }).when('/about', {
-    templateUrl: '/templates/about.html',
-    controller: 'AboutController'
+  }).when('/bio', {
+    templateUrl: '/templates/bio.html',
+    controller: 'BioController'
   }).when('/portfolio', {
     templateUrl: '/templates/portfolio.html',
     controller: 'PortfolioController'

@@ -3,7 +3,7 @@
     "title": "Chatzo",
     "link": "http://chatzo.herokuapp.com/",
     "tagLine": "A Simple Chat App",
-    "description": "This was a side project I made while learning about socket.io. As an homage to a friend of my mine who says wacky random things, there is a chat-bot that will respond to messages from time to time: shib-bot.",
+    "description": "This was a side project I made while learning about web sockets. It uses Google OAuth for identity and persists data with postgreSQL. As an homage to a friend of my mine who says wacky random things, there is a chat-bot that will respond to messages from time to time: shib-bot.",
     "technologies": [
       "socket.io",
       "node/express",
@@ -15,7 +15,7 @@
     "title": "Planit",
     "link": "http://www.planit.space/",
     "tagLine": "Universal Event Planning",
-    "description": "This was a group project made during my full stack web development program at Galvanize. Users can come together to work on organizing a taking part in events.",
+    "description": "This was a group project made during my full stack web development program at Galvanize. Users can come together to work on organizing and taking part in events. While organizing an event you can create tasks, and then others can submit bids / proposals to get picked for that task.",
     "technologies": [
       "postgreSQL",
       "node/express",
@@ -27,7 +27,7 @@
     "title": "Pizza Time",
     "link": "https://pizzatime.firebaseapp.com/",
     "tagLine": "The World's Most Accurate Clock",
-    "description": "In a time that I was learning a ton about server-side programming, I wanted to see if I could still do something fully front-end. Is it weird that I'm more proud of this than anything else in my portfolio?",
+    "description": "In a time that I was learning a ton about server-side programming, I wanted to see if I could still do something fully front-end. I threw this together in an hour or so in response to a joke that emerged early that day among my friends. Is it weird that I'm more proud of this than anything else in my portfolio?",
     "technologies": [
       "scss",
       "jQuery"
@@ -36,7 +36,7 @@
     "title": "WordSearch",
     "link": "https://wordsearch.firebaseapp.com/",
     "tagLine": "A Wordsearch Puzzle When You Need One",
-    "description": "My first deployed web app is a wordsearch puzzle generator based on a few user inputs. The words used to make the puzzle are referenced with an API that pulls a definition for each one.",
+    "description": "My first deployed web app is a wordsearch puzzle generator based on a few user inputs. The words used to make the puzzle are referenced with a dictionary API that pulls a definition for each one.",
     "technologies": [
       "scss",
       "jQuery",
