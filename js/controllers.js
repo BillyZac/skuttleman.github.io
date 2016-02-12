@@ -28,14 +28,5 @@ app.controller('MusicController', [
   '$scope', '$rootScope', 'loadJSON', function($scope, $rootScope, loadJSON) {
     $rootScope.view = 'music';
     $rootScope.backgroundImage = '/images/music.jpg';
-
-  }
-]);
-
-app.controller('LinksController', [
-  '$scope', '$rootScope', 'loadJSON', function($scope, $rootScope, loadJSON) {
-    $rootScope.view = 'links';
-    $rootScope.backgroundImage = '/images/climbing.jpg';
-
   }
 ]);

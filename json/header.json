@@ -1,5 +1,5 @@
 {
-  "data": [{
+  "navs": [{
     "link": "#/home",
     "text": "home",
     "iClass": "fa fa-home"
@@ -15,9 +15,15 @@
     "link": "#/music",
     "text": "music",
     "iClass": "fa fa-music"
+  }],
+  "links": [{
+    "link": "http://www.github.com/skuttleman",
+    "iClass": "fa fa-github-square"
   },{
-    "link": "#/links",
-    "text": "links",
-    "iClass": "fa fa-link"
+    "link": "http://www.linkedin.com/in/allredbd",
+    "iClass": "fa fa-linkedin-square"
+  },{
+    "link": "http://www.reasonabout.co",
+    "iClass": "fa fa-pencil-square"
   }]
 }

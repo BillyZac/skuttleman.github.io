@@ -26,18 +26,59 @@ img.back-image {
 h2 {
   font-style: italic;
 }
-.nav ul {
+.nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav ul.links {
   height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
+.nav ul.links li.link-element {
+  width: 40px;
+}
+
+.nav ul.links li.link-element i.fa {
+  font-size: 1.75em;
+  color: #ccc;
+  transition: 0.4s color, 0.4s font-size;
+}
+
+.nav ul.links li.link-element i.fa:hover {
+  color: #fff;
+  font-size: 1.9em;
+}
+
+.nav ul.navs {
+  display: inline;
+  height: 100%;
+  width: 50%;
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
 }
 
-.nav li {
+.nav ul.navs li.nav-element {
   height: 100%;
+  align-self: flex-end;
+  transition: 0.4s background-color;
 }
 
-.nav li.current {
+@media (max-width: 140vh) {
+  .nav ul.navs li.nav-element .nav-text {
+    display: none;
+  }
+}
+
+.nav ul.navs li.nav-element.current {
   color: white;
   background-color: black;
   font-style: italic;
@@ -46,19 +87,19 @@ h2 {
   border-bottom: 0;
 }
 
-.nav li.current:first-child {
+.nav ul.navs li.nav-element.current:first-child {
   border-left: 0;
 }
 
-.nav li.current:last-child {
+.nav ul.navs li.nav-element.current:last-child {
   border-right: 0;
 }
 
-.nav li:hover:not(.current) {
+.nav ul.navs li.nav-element:hover:not(.current) {
   background-color: #ddd;
 }
 
-.nav li > * {
+.nav ul.navs li.nav-element > * {
   padding: 0 20px;
   height: 100%;
   display: flex;
@@ -67,7 +108,7 @@ h2 {
   align-items: center;
 }
 
-.nav li i.nav-icon {
+.nav ul.navs li.nav-element i.nav-icon {
   font-size: 1.75em;
   margin-right: 10px;
 }
@@ -90,7 +131,7 @@ h2 {
 
 .app {
   overflow-y: scroll;
-  height: 100%;
+  height: 100vmin;
 }
 
 .app .above-the-fold {
@@ -124,11 +165,8 @@ h2 {
   margin-top: 20px;
 }
 
-.app.portfolio .below-the-fold h3 {
+.app.portfolio .below-the-fold h3 a.project.title {
   text-decoration: underline;
-}
-
-.app.portfolio .below-the-fold h3 a {
   color: #008cba;
 }
 

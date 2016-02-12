@@ -12,9 +12,6 @@ app.config(['$routeProvider', function(route) {
   }).when('/music', {
     templateUrl: '/templates/music.html',
     controller: 'MusicController'
-  }).when('/links', {
-    templateUrl: '/templates/links.html',
-    controller: 'LinksController'
   })
 // otherwise
   .otherwise('/');
