@@ -161,6 +161,60 @@ h2 {
 .app .below-the-fold p {
   text-align: justify;
 }
+.app.music .below-the-fold {
+  padding-bottom: 20px;
+}
+
+.app.music .below-the-fold > p:not(:last-of-type) {
+  margin-bottom: 0;
+}
+
+.app.music .below-the-fold .music-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.app.music .below-the-fold .music-list div.song-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.app.music .below-the-fold .music-list div.song-list ul.songs {
+  list-style: none;
+  margin: 0;
+}
+
+.app.music .below-the-fold .music-list div.song-list .song {
+  cursor: pointer;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.app.music .below-the-fold .music-list div.song-list .song.selected {
+  font-style: italic;
+  background-color: #88d;
+}
+
+.app.music .below-the-fold .music-list figure {
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app.music .below-the-fold .music-list figure .album-cover {
+  width: 135px;
+  height: 135px;
+}
+
+.app.music .below-the-fold .music-list figure .album-title {
+  font-style: italic;
+}
+
+.app.music .below-the-fold .music-list figure .itunes-button {
+  width: 80px;
+}
 .app.portfolio .below-the-fold li:not(:first-child) h3 {
   margin-top: 20px;
 }
